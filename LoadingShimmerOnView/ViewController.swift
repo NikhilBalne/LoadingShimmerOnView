@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import LoadingShimmer
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        LoadingShimmer.startCovering(view, with: nil)
+        
+        let delayTime = DispatchTime.now() + 3.0
+        
+        DispatchQueue.main.asyncAfter(deadline: delayTime, execute: {
+            LoadingShimmer.stopCovering(self.view)
+        })
+        
     }
 
-
+    @IBAction func startButtonTapped(_ sender: Any) {
+        LoadingShimmer.startCovering(view, with: nil)
+    }
+    
+    @IBAction func stopButtonTapped(_ sender: Any) {
+        LoadingShimmer.stopCovering(view)
+    }
 }
 

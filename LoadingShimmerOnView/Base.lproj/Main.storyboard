@@ -1,24 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZMb-6F-tQD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Shimmmer-->
+        <scene sceneID="oce-bS-bL0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="6Vw-rW-xVX" customClass="ViewController" customModule="LoadingShimmer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUi-af-xfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-radar-96" translatesAutoresizingMaskIntoConstraints="NO" id="CJU-4S-z6C">
+                                <rect key="frame" x="20" y="118" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="8Bu-BA-d31"/>
+                                    <constraint firstAttribute="height" constant="80" id="tOW-fN-qvn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZS-ou-MFc">
+                                <rect key="frame" x="108" y="118" width="286" height="42"/>
+                                <string key="text">An easy way to add a shimmering effect to any view with just one line of code.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgh-XR-OgP">
+                                <rect key="frame" x="108" y="168" width="286" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fps-tW-Tk5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Find Source Code on GitHub">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsK-En-uWB">
+                                <rect key="frame" x="20" y="230" width="374" height="2"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="IH5-oG-ykA"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sVJ-go-32g">
+                                <rect key="frame" x="20" y="248" width="374" height="133"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="p2X-vd-gUg"/>
+                                </constraints>
+                                <string key="text">LoadingShimmer is an easy way to add a shimmering effect to any view with just single line of code. It is useful as an unobtrusive loading indicator. This is a network request waiting for the framework, the framework to increase the dynamic effect, convenient and fast, a line of code can be used.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IGX-LU-fjt">
+                                <rect key="frame" x="18" y="397" width="378" height="31"/>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh0-2z-Bkm">
+                                <rect key="frame" x="345" y="435" width="51" height="31"/>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-GY-MEN">
+                                <rect key="frame" x="20" y="435" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CJU-4S-z6C" firstAttribute="top" secondItem="KZS-ou-MFc" secondAttribute="top" id="6fa-bh-1Cr"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="IGX-LU-fjt" secondAttribute="trailing" constant="20" id="6kf-0p-VbP"/>
+                            <constraint firstItem="RsK-En-uWB" firstAttribute="leading" secondItem="a5z-Dt-LLf" secondAttribute="leading" constant="20" id="EBU-xQ-IRH"/>
+                            <constraint firstItem="sVJ-go-32g" firstAttribute="top" secondItem="RsK-En-uWB" secondAttribute="bottom" constant="16" id="G3m-fE-pMX"/>
+                            <constraint firstItem="RsK-En-uWB" firstAttribute="top" secondItem="CJU-4S-z6C" secondAttribute="bottom" constant="32" id="IwD-rM-efE"/>
+                            <constraint firstItem="Fgf-GY-MEN" firstAttribute="top" secondItem="IGX-LU-fjt" secondAttribute="bottom" constant="8" id="QZb-9C-v0o"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="RsK-En-uWB" secondAttribute="trailing" constant="20" id="RLq-m6-Efg"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="Gh0-2z-Bkm" secondAttribute="trailing" constant="20" id="Rwf-IS-vdC"/>
+                            <constraint firstItem="KZS-ou-MFc" firstAttribute="leading" secondItem="CJU-4S-z6C" secondAttribute="trailing" constant="8" id="bFe-D3-HPd"/>
+                            <constraint firstItem="lgh-XR-OgP" firstAttribute="bottom" secondItem="CJU-4S-z6C" secondAttribute="bottom" id="gcx-MR-Rxa"/>
+                            <constraint firstItem="IGX-LU-fjt" firstAttribute="leading" secondItem="a5z-Dt-LLf" secondAttribute="leading" constant="20" id="h35-Bq-SC4"/>
+                            <constraint firstItem="CJU-4S-z6C" firstAttribute="leading" secondItem="a5z-Dt-LLf" secondAttribute="leading" constant="20" id="hHm-Pv-VeZ"/>
+                            <constraint firstItem="Gh0-2z-Bkm" firstAttribute="top" secondItem="IGX-LU-fjt" secondAttribute="bottom" constant="8" id="hJj-xR-J0c"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="lgh-XR-OgP" secondAttribute="trailing" constant="20" id="hKS-mS-YPD"/>
+                            <constraint firstItem="IGX-LU-fjt" firstAttribute="top" secondItem="sVJ-go-32g" secondAttribute="bottom" constant="16" id="icr-lk-Sfz"/>
+                            <constraint firstItem="sVJ-go-32g" firstAttribute="leading" secondItem="a5z-Dt-LLf" secondAttribute="leading" constant="20" id="kGQ-1n-TH0"/>
+                            <constraint firstItem="lgh-XR-OgP" firstAttribute="leading" secondItem="KZS-ou-MFc" secondAttribute="leading" id="kaf-6F-qDO"/>
+                            <constraint firstItem="lgh-XR-OgP" firstAttribute="top" secondItem="KZS-ou-MFc" secondAttribute="bottom" constant="8" id="m6m-Om-veK"/>
+                            <constraint firstItem="Fgf-GY-MEN" firstAttribute="leading" secondItem="a5z-Dt-LLf" secondAttribute="leading" constant="20" id="nCt-D9-c5j"/>
+                            <constraint firstItem="KZS-ou-MFc" firstAttribute="top" secondItem="a5z-Dt-LLf" secondAttribute="top" constant="30" id="oGG-G7-pXB"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="KZS-ou-MFc" secondAttribute="trailing" constant="20" id="rkI-Qd-Fdp"/>
+                            <constraint firstItem="a5z-Dt-LLf" firstAttribute="trailing" secondItem="sVJ-go-32g" secondAttribute="trailing" constant="20" id="u5O-tZ-WcB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a5z-Dt-LLf"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shimmmer" id="OwV-j8-r9O">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Stop" id="oRW-eJ-bZk">
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="6Vw-rW-xVX" id="7K2-P3-XcH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Start" id="2ch-mL-sBn">
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="6Vw-rW-xVX" id="lsF-Gw-24m"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="981-fM-gNx" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4EL-Si-Hb1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZMb-6F-tQD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bOs-8H-vkJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Vw-rW-xVX" kind="relationship" relationship="rootViewController" id="PDc-gH-OFn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUX-I6-YzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-radar-96" width="96" height="96"/>
+    </resources>
 </document>

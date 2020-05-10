@@ -1,0 +1,6 @@
+framework module Pods_LoadingShimmerOnView {
+  umbrella header "Pods-LoadingShimmerOnView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC8D9C4B650C0057C8C506CB /* Pods_LoadingShimmerOnView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A375D0A9323145590FAF6CE6 /* Pods_LoadingShimmerOnView.framework */; };
 		CBCC0EFB2467D9F600B1B02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC0EFA2467D9F600B1B02D /* AppDelegate.swift */; };
 		CBCC0EFD2467D9F600B1B02D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC0EFC2467D9F600B1B02D /* SceneDelegate.swift */; };
 		CBCC0EFF2467D9F600B1B02D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCC0EFE2467D9F600B1B02D /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0191446B1CB04DC91DBD7EFE /* Pods-LoadingShimmerOnView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadingShimmerOnView.release.xcconfig"; path = "Target Support Files/Pods-LoadingShimmerOnView/Pods-LoadingShimmerOnView.release.xcconfig"; sourceTree = "<group>"; };
+		3B84B8D705C9B84302B618FD /* Pods-LoadingShimmerOnView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoadingShimmerOnView.debug.xcconfig"; path = "Target Support Files/Pods-LoadingShimmerOnView/Pods-LoadingShimmerOnView.debug.xcconfig"; sourceTree = "<group>"; };
+		A375D0A9323145590FAF6CE6 /* Pods_LoadingShimmerOnView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoadingShimmerOnView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCC0EF72467D9F600B1B02D /* LoadingShimmerOnView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadingShimmerOnView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCC0EFA2467D9F600B1B02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBCC0EFC2467D9F600B1B02D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8D9C4B650C0057C8C506CB /* Pods_LoadingShimmerOnView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A5CB4415C322B117391EE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A375D0A9323145590FAF6CE6 /* Pods_LoadingShimmerOnView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A4F33C07DCBAA304F663320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B84B8D705C9B84302B618FD /* Pods-LoadingShimmerOnView.debug.xcconfig */,
+				0191446B1CB04DC91DBD7EFE /* Pods-LoadingShimmerOnView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CBCC0EEE2467D9F600B1B02D = {
 			isa = PBXGroup;
 			children = (
 				CBCC0EF92467D9F600B1B02D /* LoadingShimmerOnView */,
 				CBCC0EF82467D9F600B1B02D /* Products */,
+				9A4F33C07DCBAA304F663320 /* Pods */,
+				26A5CB4415C322B117391EE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBCC0F0B2467D9F900B1B02D /* Build configuration list for PBXNativeTarget "LoadingShimmerOnView" */;
 			buildPhases = (
+				4BE95D7800B9A99F19F51C2A /* [CP] Check Pods Manifest.lock */,
 				CBCC0EF32467D9F600B1B02D /* Sources */,
 				CBCC0EF42467D9F600B1B02D /* Frameworks */,
 				CBCC0EF52467D9F600B1B02D /* Resources */,
+				A441D6F30D5FD5DE1CF17D86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BE95D7800B9A99F19F51C2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoadingShimmerOnView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A441D6F30D5FD5DE1CF17D86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoadingShimmerOnView/Pods-LoadingShimmerOnView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoadingShimmerOnView/Pods-LoadingShimmerOnView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoadingShimmerOnView/Pods-LoadingShimmerOnView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBCC0EF32467D9F600B1B02D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		CBCC0F0C2467D9F900B1B02D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B84B8D705C9B84302B618FD /* Pods-LoadingShimmerOnView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		CBCC0F0D2467D9F900B1B02D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0191446B1CB04DC91DBD7EFE /* Pods-LoadingShimmerOnView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
